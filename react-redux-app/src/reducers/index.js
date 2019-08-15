@@ -1,11 +1,29 @@
+import {  FETCH_WEATHER_DATA_START,
+    FETCH_WEATHER_DATA_SUCCESS,
+
+} from "../actions"
+
 
 const initialState = {
     weather: [],
-    test: "test"
+    isLoading: false,
+    error: ''
 }
 
 export const weatherReducer = (state = initialState, action) => {
     switch (action.type) {
+        case "FETCH_WEATHER_DATA_START":
+            return {
+                ...state,
+                isLoading: true,
+                error: ''
+            }
+            case "FETCH_WEATHER_DATA_SUCCESS":
+                return {
+                    ...state,
+                    isLoading: action.payload,
+                    error: ''
+                }
         default:
             return state
     }

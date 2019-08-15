@@ -12,7 +12,7 @@ export const getData = () => {
         //     'X-Auth-Token': "e57963e324236f51284d2c4b7dee8fe8"
         // }
         const proxyurl = "https://cors-anywhere.herokuapp.com/";
-        const url = "https://api.darksky.net/forecast/e57963e324236f51284d2c4b7dee8fe8/37.8267,-122.4233";
+        const url = "https://api.darksky.net/forecast/e57963e324236f51284d2c4b7dee8fe8/40.6782,73.9442";
         axios
         .get(proxyurl + url)
         .then(res => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import {connect} from "redux";
+import { createStore } from "redux";
 import {Provider} from "react-redux";
 
 import {weatherReducer} from "./reducers"

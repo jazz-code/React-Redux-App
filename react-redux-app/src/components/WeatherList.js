@@ -4,7 +4,7 @@ import {connect} from "react-redux"
 
 import {getData} from "../actions"
 
-import {Weather} from "./Weather"
+import Weather from "./Weather"
 
 const WeatherList = (props) => {
 

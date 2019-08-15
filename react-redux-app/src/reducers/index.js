@@ -1,6 +1,7 @@
 
 const initialState = {
-    weather: []
+    weather: [],
+    test: "test"
 }
 
 export const weatherReducer = (state = initialState, action) => {

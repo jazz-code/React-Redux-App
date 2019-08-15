@@ -8,7 +8,8 @@ const WeatherList = (props) => {
 
     return (
         <div>
-            <p>{console.log(props.weather)}</p>
+            <h1>Test</h1>
+            <button onClick={props.getData}>Data</button>
         </div>
     )
 }

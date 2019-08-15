@@ -1,20 +1,22 @@
 import React from "react"
 
+import {getData} from "../actions"
+
 import {connect} from "react-redux"
 
 const WeatherList = (props) => {
 
     return (
         <div>
-            <h1>{props.test}</h1>
+            <p>{console.log(props.weather)}</p>
         </div>
     )
 }
 
 const mapStateToProps = (state) => {
     return {
-        test: state.test
+        weather: state.weather
     }
 }
 
-export default connect(mapStateToProps, {})(WeatherList)
+export default connect(mapStateToProps, {getData})(WeatherList)

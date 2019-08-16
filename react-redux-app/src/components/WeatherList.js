@@ -18,19 +18,21 @@ const WeatherList = (props) => {
           'Get The Weather'
         )}
       </button>
-            {props.weather && props.weather.map(items => (
-                <Weather key={items.id} weatherData={items} />
-            ))}
-          
-        </div>
-    )
-}
+      {props.weather &&
+        props.weather.map(item => <Weather key={item.name} weatherData={item} />)}
+    </div>
+  );
+};
 
-const mapStateToProps = (state) => {
-    return {
-        weather: state.weather,
-        isLoading: state.isLoading
-    }
-}
-
-export default connect(mapStateToProps, {getData})(WeatherList)
+const mapStateToProps = state => {
+    console.log("weather state", state.weather)
+    console.log("weather", state)
+  return {
+    isLoading: state.isLoading,
+    weather: state.weather
+  };
+};
+export default connect(
+  mapStateToProps,
+  { getData }
+)(WeatherList);
